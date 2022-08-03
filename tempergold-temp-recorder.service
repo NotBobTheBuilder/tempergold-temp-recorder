@@ -1,0 +1,7 @@
+[Unit]
+Description=Tempergold temperature recorder
+
+[Service]
+Type=oneshot
+EnvironmentFile=/home/pi/.influx_credentials
+ExecStart=/usr/bin/env python3 /home/pi/tempergold-temp-recorder/tempergold-temp-recorder.py
